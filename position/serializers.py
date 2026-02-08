@@ -23,5 +23,5 @@ class LeadStatusUpdateSerializer(serializers.Serializer):
 
 
 class List_amar_serializer(serializers.Serializer):
-    # status_name = serializers.CharField()
-    total = serializers.IntegerField()
+    status = serializers.CharField()
+    total = serializers.IntegerField(source="status_count")
